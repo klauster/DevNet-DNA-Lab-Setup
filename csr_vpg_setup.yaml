@@ -24,4 +24,4 @@
      ios_config:
        provider: "{{ credentials }}"
        authorize: yes
-       save: yes
+       save_when: modified
