@@ -1,0 +1,27 @@
+--- 
+
+- hosts: ios
+
+  gather_facts: false
+  connection: local
+
+  tasks:
+   - name: Config VirtualPortGroup
+     ios_config:
+       provider: "{{ credentials }}"       
+       authorize: yes
+       lines:
+         - interface VirtualPortGroup0
+         - ip address 10.12.21.1 255.255.255.0
+         - ip nat inside
+         - interface GigabitEthernet1
+         - ip nat outside
+         - ip access-list standard GS_NAT_ACL
+         - permit 10.0.0.0 0.255.255.255
+         - ip nat inside source list GS_NAT_ACL interface GigabitEthernet1 overload
+
+   - name: Save Config
+     ios_config:
+       provider: "{{ credentials }}"
+       authorize: yes
+       save: yes

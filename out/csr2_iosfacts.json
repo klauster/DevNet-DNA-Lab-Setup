@@ -1,0 +1,64 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "198.18.134.12"
+        ], 
+        "ansible_net_all_ipv6_addresses": [], 
+        "ansible_net_filesystems": [
+            "bootflash:"
+        ], 
+        "ansible_net_gather_subset": [
+            "hardware", 
+            "default", 
+            "interfaces"
+        ], 
+        "ansible_net_hostname": "csr2", 
+        "ansible_net_image": "bootflash:packages.conf", 
+        "ansible_net_interfaces": {
+            "GigabitEthernet1": {
+                "bandwidth": 1000000, 
+                "description": null, 
+                "duplex": "Full", 
+                "ipv4": [
+                    {
+                        "address": "198.18.134.12", 
+                        "subnet": "18"
+                    }
+                ], 
+                "lineprotocol": "up ", 
+                "macaddress": "0050.5602.2201", 
+                "mediatype": "Virtual", 
+                "mtu": 1500, 
+                "operstatus": "up", 
+                "type": "CSR vNIC"
+            }, 
+            "GigabitEthernet2": {
+                "bandwidth": 1000000, 
+                "description": null, 
+                "duplex": "Full", 
+                "ipv4": [], 
+                "lineprotocol": "up ", 
+                "macaddress": "0050.5602.2202", 
+                "mediatype": "Virtual", 
+                "mtu": 1500, 
+                "operstatus": "up", 
+                "type": "CSR vNIC"
+            }
+        }, 
+        "ansible_net_memfree_mb": 1852402, 
+        "ansible_net_memtotal_mb": 2186208, 
+        "ansible_net_model": null, 
+        "ansible_net_neighbors": {
+            "null": [
+                {
+                    "host": null, 
+                    "port": null
+                }
+            ]
+        }, 
+        "ansible_net_serialnum": "978ZZ62ND98", 
+        "ansible_net_version": "16.08.01"
+    }, 
+    "changed": false, 
+    "failed": false
+}

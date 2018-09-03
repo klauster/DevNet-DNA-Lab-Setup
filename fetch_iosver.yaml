@@ -1,0 +1,19 @@
+---
+
+- hosts: ios
+  connection: local
+  vars:
+    trapdests: []
+  tasks:
+    - name: show version 
+      register: command_out
+      ios_command:
+        commands: "show version | i IOS XE"
+        provider: "{{ credentials }}"
+
+    - name: extract values
+      set_fact:
+        trapdests: "{{trapdests}}"
+      with_items: "{{command_out.stdout_lines}}"
+    - copy: content="{{ trapdests | to_nice_json }}" dest="out/{{inventory_hostname}}_show_ver.json"
+

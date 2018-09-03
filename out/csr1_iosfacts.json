@@ -1,0 +1,82 @@
+{
+    "ansible_facts": {
+        "ansible_net_all_ipv4_addresses": [
+            "10.12.21.1", 
+            "198.18.134.11"
+        ], 
+        "ansible_net_all_ipv6_addresses": [], 
+        "ansible_net_filesystems": [
+            "bootflash:"
+        ], 
+        "ansible_net_gather_subset": [
+            "hardware", 
+            "default", 
+            "interfaces"
+        ], 
+        "ansible_net_hostname": "csr1", 
+        "ansible_net_image": "bootflash:packages.conf", 
+        "ansible_net_interfaces": {
+            "GigabitEthernet1": {
+                "bandwidth": 1000000, 
+                "description": null, 
+                "duplex": "Full", 
+                "ipv4": [
+                    {
+                        "address": "198.18.134.11", 
+                        "subnet": "18"
+                    }
+                ], 
+                "lineprotocol": "up ", 
+                "macaddress": "0050.5602.2101", 
+                "mediatype": "Virtual", 
+                "mtu": 1500, 
+                "operstatus": "up", 
+                "type": "CSR vNIC"
+            }, 
+            "GigabitEthernet2": {
+                "bandwidth": 1000000, 
+                "description": null, 
+                "duplex": "Full", 
+                "ipv4": [], 
+                "lineprotocol": "up ", 
+                "macaddress": "0050.5602.2102", 
+                "mediatype": "Virtual", 
+                "mtu": 1500, 
+                "operstatus": "up", 
+                "type": "CSR vNIC"
+            }, 
+            "VirtualPortGroup0": {
+                "bandwidth": 750000, 
+                "description": null, 
+                "duplex": null, 
+                "ipv4": [
+                    {
+                        "address": "10.12.21.1", 
+                        "subnet": "24"
+                    }
+                ], 
+                "lineprotocol": "up ", 
+                "macaddress": "001e.49ba.24bd", 
+                "mediatype": null, 
+                "mtu": 1500, 
+                "operstatus": "up", 
+                "type": "Virtual Port Group"
+            }
+        }, 
+        "ansible_net_memfree_mb": 1850827, 
+        "ansible_net_memtotal_mb": 2186208, 
+        "ansible_net_model": null, 
+        "ansible_net_neighbors": {
+            "null": [
+                {
+                    "host": null, 
+                    "port": null
+                }
+            ]
+        }, 
+        "ansible_net_serialnum": "9M93T8LVKM4", 
+        "ansible_net_version": "16.08.01"
+    }, 
+    "changed": false, 
+    "failed": false
+}

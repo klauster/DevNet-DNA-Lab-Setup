@@ -1,0 +1,4 @@
+credentials:
+  host: "{{ inventory_hostname }}"
+  username: "admin"
+  password: "C1sco12345"

@@ -1,0 +1,22 @@
+--- 
+
+- hosts: ios
+
+  gather_facts: false
+  connection: local
+
+  tasks:
+   - name: Enable GuestShell
+     ios_config:
+       provider: "{{ credentials }}"
+       authorize: yes
+       lines:
+         - iox
+         - app-hosting appid guestshell
+         - vnic gateway1 virtualportgroup 0 guest-interface 0 guest-ipaddress 10.12.21.2 netmask 255.255.255.0 gateway 10.12.21.1 name-server 8.8.8.8 default
+
+   - name: Save Config
+     ios_config:
+       provider: "{{ credentials }}"
+       authorize: yes
+       save: yes
